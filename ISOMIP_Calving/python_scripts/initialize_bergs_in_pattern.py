@@ -1,0 +1,1 @@
+../../ice_ocean_SIS2/scripts/initialize_bergs_in_pattern.py
