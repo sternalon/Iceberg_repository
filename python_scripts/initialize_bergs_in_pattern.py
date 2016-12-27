@@ -1,0 +1,1 @@
+../../scripts/initialize_bergs_in_pattern.py
