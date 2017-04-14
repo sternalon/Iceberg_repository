@@ -1,6 +1,6 @@
 echo 'Beginning setup...'
 
-cd python_scripts
+cd ISOMIP_Calving/python_scripts
 
 #Creating mosaic files using script
 echo 'Creating mosaic files...'
