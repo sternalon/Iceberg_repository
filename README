@@ -1,4 +1,7 @@
-To set up the experiments, please run the setup_ISOMIP_calving.sh script. This will create all the netcdf files which are needed to run the simulations.
+To set up the experiments, please run the setup_ISOMIP_calving.sh script. This will create all the netcdf files which are needed to run the simulations. To run the script, write the following at the command line:
+
+source setup_ISOMIP_calving.sh
+
 
 
 - Building an executable:
