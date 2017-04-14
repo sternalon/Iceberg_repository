@@ -1,6 +1,10 @@
 echo 'Beginning setup...'
 
+git submodule init
+git submodule update
+
 cd ISOMIP_Calving/python_scripts
+mkdir -p output_files
 
 #Creating mosaic files using script
 echo 'Creating mosaic files...'
@@ -32,4 +36,3 @@ cp output_files/ISOMIP_Ice_Shelf_clipped.nc ../INPUT/isomip_ice_shelf1_clipped.n
 cp input_files/3D_LAYER_WARM_TPY_IC.nc ../INPUT/
 cd ..
 echo 'Setup complete!'
-
