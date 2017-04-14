@@ -22,3 +22,6 @@
 [submodule "src/icebergs"]
 	path = src/icebergs
 	url = git@github.com:sternalon/icebergs.git
+[submodule "Scripts_and_analysis"]
+	path = Scripts_and_analysis
+	url = https://github.com/sternalon/Scripts_and_analysis.git
