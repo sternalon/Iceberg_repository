@@ -1,1 +1,1 @@
-../../ice_ocean_SIS2/scripts/Create_mosaic.py
+../../Scripts_and_analysis/Create_mosaic.py
