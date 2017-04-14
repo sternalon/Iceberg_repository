@@ -1,1 +1,0 @@
-../../../../INPUT/isomip_ice_shelf1_clipped.nc
