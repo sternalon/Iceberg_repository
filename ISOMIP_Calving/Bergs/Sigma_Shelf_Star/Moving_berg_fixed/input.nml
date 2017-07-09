@@ -1,6 +1,6 @@
  &MOM_input_nml
         output_directory = './',
-        input_filename = 'n'
+        input_filename = 'r'
         restart_input_dir = 'INPUT/',
         restart_output_dir = 'RESTART/',
         parameter_filename = 'MOM_input',
@@ -8,7 +8,7 @@
 
  &SIS_input_nml
         output_directory = './',
-        input_filename = 'n'
+        input_filename = 'r'
         restart_input_dir = 'INPUT/',
         restart_output_dir = 'RESTART/',
         parameter_filename = 'SIS_input',
@@ -18,14 +18,14 @@
          max_output_fields=1000
          max_input_fields=1000
          max_num_axis_sets=1000
-         conserve_water=.false. 
+	 flush_nc_files=.true.
          max_files=1000
          max_axes=2000
  /
 
  &coupler_nml
             months = 0,
-            days   = 1,
+            days   = 60,
             current_date = 1,1,1,0,0,0,
             hours = 0,
             minutes =0, 
@@ -45,7 +45,7 @@
 
  &icebergs_nml
     verbose=.false.,
-    verbose_hrs=24,
+    verbose_hrs=240,
     traj_sample_hrs=24000,
     ignore_ij_restart=.true.
     halo=2,
@@ -56,15 +56,25 @@
     add_weight_to_ocean=.true.,
     passive_mode=.false.,
     Static_icebergs=.False.,
+    ignore_missing_restart_bergs=.false.,
+    generate_test_icebergs=.false.,
+    speed_limit=0.,
+    use_roundoff_fix=.true.,
+    make_calving_reproduce=.false.,
     Runge_not_Verlet=.false.,
     iceberg_bonds_on=.false.,
+    critical_interaction_damping_on=.true.,
     use_new_predictive_corrective=.true.,
     interactive_icebergs_on=.false.
     halo_debugging=.false.
-    spring_coef=0.000001
+    spring_coef=0.00001
+    distribution=0.0, 0.99, 0.0, 0.00, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    mass_scaling=1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    initial_mass=8.8e7, 4.1e8, 3.3e9, 1.8e10, 3.8e10, 7.5e10, 1.2e11, 2.2e11, 3.9e11, 7.4e11,
     hexagonal_icebergs=.true.
-    allow_bergs_to_roll=.false.
-    set_melt_rates_to_zero=.true.
+    allow_bergs_to_roll=.true.
+    set_melt_rates_to_zero=.false.
+    use_roundoff_fix=.false.
     grid_is_latlon=.false.
     grid_is_regular=.true.
     initial_orientation=-0.
@@ -73,6 +83,7 @@
     u_override=0.01
     v_override=0.00
     override_iceberg_velocities=.true.
+    add_iceberg_thickness_to_SSH=.false.
     max_bonds=6
     Iceberg_melt_without_decay=.true.
     melt_icebergs_as_ice_shelf=.true.
@@ -91,6 +102,9 @@
     apply_thickness_cutoff_to_bergs_melt=.true.
     apply_thickness_cutoff_to_gridded_melt=.true.
     melt_cutoff=10.
+    read_old_restarts=.false.
+    internal_bergs_for_drag=.true.
+    use_mixed_melting=.true.
  &data_override_nml
          /
 

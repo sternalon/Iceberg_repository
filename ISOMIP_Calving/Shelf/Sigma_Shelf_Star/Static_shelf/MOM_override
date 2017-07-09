@@ -13,7 +13,10 @@
 ! TIME STEP
 #override DT = 360
 #override DT_THERM = 360
-!#override DT_FORCING = 360
+#override DT_FORCING = 360
+!#override DT = 10
+!#override DT_THERM = 10
+!#override DT_FORCING = 10
 
 ! MIXING
 #override SMAGORINSKY_KH = False

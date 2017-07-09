@@ -11,9 +11,9 @@
 #override NKML = 4
 
 ! TIME STEP
-!#override DT = 10
-!#override DT_THERM = 10
-!#override DT_FORCING = 10
+#override DT = 10
+#override DT_THERM = 10
+#override DT_FORCING = 10
 
 ! MIXING
 #override SMAGORINSKY_KH = False

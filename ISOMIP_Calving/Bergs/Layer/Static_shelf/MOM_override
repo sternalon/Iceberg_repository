@@ -5,8 +5,11 @@
 #override NKML = 4
 
 ! TIME STEP
-#override DT = 720
-#override DT_THERM = 720
+!#override DT = 720
+!#override DT_THERM = 720
+#override DT = 360
+#override DT_THERM = 360
+#override DT_FORCING = 360
 
 ! MIXING
 #override SMAGORINSKY_KH = False
