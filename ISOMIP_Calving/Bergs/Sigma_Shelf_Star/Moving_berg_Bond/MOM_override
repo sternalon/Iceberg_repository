@@ -88,3 +88,4 @@ USE_ISOMIP_TRACER = False
 
 !Passing Iceberg field to ocean
 ICEBERGS_APPLY_RIGID_BOUNDARY=True !Different boundary condition is used under ice shelves
+ALLOW_ICEBERG_FLUX_DIAGNOSTICS=True

@@ -718,6 +718,4 @@ RESTINT = 365.0                 !   [days] default = 0.0
                                 ! incremental restart files at all.
 ENERGYSAVEDAYS = 2.0            !   [days] default = 0.0034722222222222
                                 ! The interval in units of TIMEUNIT between saves of the
-ICEBERGS_APPLY_RIGID_BOUNDARY=True !Different boundary condition is used under ice shelves
-ALLOW_ICEBERG_FLUX_DIAGNOSTICS=True
 CALC_RHO_FOR_SEA_LEVEL=True
