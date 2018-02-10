@@ -1,24 +1,23 @@
 echo 'Beginning setup...'
 
-
-
 #Loading python libraries (its possible that not all of these are needed)
-module unload PrgEnv-intel/5.2.8
-module load PrgEnv-gnu/5.2.82
-module load python_scipy/0.17.0
+if command -v module > /dev/null 2>&1; then
+    module unload PrgEnv-intel/5.2.8
+    module load PrgEnv-gnu/5.2.82
+    module load python_scipy/0.17.0
 
-module load python
-module load python_netcdf4
-module load python_numpy
-module load python_pygtk
-module load python_matplotlib
-module load python_scipy/0.17.0
-
-
+    module load python
+    module load python_netcdf4
+    module load python_numpy
+    module load python_pygtk
+    module load python_matplotlib
+    module load python_scipy/0.17.0
+fi
 
 git submodule init
 git submodule update
 
+mkdir -p ISOMIP_Calving/INPUT
 cd ISOMIP_Calving/python_scripts
 mkdir -p output_files
 
